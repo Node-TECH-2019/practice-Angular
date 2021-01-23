@@ -7,7 +7,7 @@ export class Forms {
     public contact_type: string,
     public subject: string,
     public comment: string,
-    public tel?: string,
-    public companyname?: string
+    public companyname?: string,
+    public tel?: string
   ){}
 }
