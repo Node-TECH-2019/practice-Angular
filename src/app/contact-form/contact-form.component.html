@@ -15,9 +15,7 @@
               </label>
             </li>
             <li>
-              <div *ngIf="name.errors && (name.dirty || name.touched)">
-                <span class="error" [hidden]="!name.errors.required">正しく入力してください。</span>
-              </div>
+                <span class="error"></span>
               <input class="w100pc cotact_form" id="companyname" type="text" name="companyname" placeholder="会社名／団体名" [(ngModel)]="model.companyname">
             </li>
           </ul>
