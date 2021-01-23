@@ -13,6 +13,11 @@ export class ContactFormComponent implements OnInit {
 
   public model: Forms = new Forms('佐藤考太','さとうこうた','info@nodetech.sub.jp','info@nodetech.sub.jp',this.contact_type[1],'subject','こんにちは！\n私はさとぅんコタティス・G・チョムニダです。','合同会社NodeTECH.','080-6608-1575');
 
+  public submitted  false;
+  onSubmit() {
+    this.submitted = true;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
