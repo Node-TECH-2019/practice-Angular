@@ -17,11 +17,7 @@
     "@angular/compiler": "~10.0.5",
     "@angular/core": "~10.0.5",
     "@angular/forms": "~10.0.5",
-<<<<<<< HEAD
-    "@angular/material": "^10.2.7",
-=======
     "@angular/material": "^11.1.0",
->>>>>>> a694c2874351be22cc27d7e607cfb034b3d3e621
     "@angular/platform-browser": "~10.0.5",
     "@angular/platform-browser-dynamic": "~10.0.5",
     "@angular/router": "~10.0.5",
