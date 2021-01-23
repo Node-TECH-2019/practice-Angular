@@ -13,7 +13,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input class="w100pc cotact_form" id="companyname" type="text" name="companyname" placeholder="会社名／団体名" value="">
+              <input class="w100pc cotact_form" id="companyname" type="text" name="companyname" placeholder="会社名／団体名" [(ngModel)]="model.companyname">
             </li>
           </ul>
         </li>
@@ -26,7 +26,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input class="w100pc cotact_form" id="your_name" type="text" name="your_name" placeholder="氏名" required value="">
+              <input class="w100pc cotact_form" id="your_name" type="text" name="your_name" placeholder="氏名" required [(ngModel)]="model.your_name">
             </li>
           </ul>
         </li>
@@ -39,7 +39,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input class="w100pc cotact_form" id="furigana" type="text" name="furigana" placeholder="ふりがな" required value="">
+              <input class="w100pc cotact_form" id="furigana" type="text" name="furigana" placeholder="ふりがな" required [(ngModel)]="model.furigana">
             </li>
           </ul>
         </li>
@@ -52,7 +52,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input type="email" class="w100pc cotact_form" id="email" name="email" placeholder="Email アドレス" required value="">
+              <input type="email" class="w100pc cotact_form" id="email" name="email" placeholder="Email アドレス" required [(ngModel)]="model.email">
             </li>
           </ul>
         </li>
@@ -65,7 +65,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input type="email" class="w100pc cotact_form" id="email_check" name="email_check" placeholder="Email アドレス（確認）" required value="">
+              <input type="email" class="w100pc cotact_form" id="email_check" name="email_check" placeholder="Email アドレス（確認）" required [(ngModel)]="model.email_check">
             </li>
           </ul>
         </li>
@@ -78,7 +78,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input type="tel" class="w100pc cotact_form" id="tel" name="tel" value="" placeholder="お電話番号（半角英数字でご入力ください）">
+              <input type="tel" class="w100pc cotact_form" id="tel" name="tel" [(ngModel)]="model.tel" placeholder="お電話番号（半角英数字でご入力ください）">
             </li>
           </ul>
         </li>
@@ -91,7 +91,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="3"  multiple>
+              <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="3" [(ngModel)]="model.contact_type">
                 <option *ngFor="let contact_type of contact_types" [value]="contact_type">{{contact_type}}</option>
               </select>
             </li>
@@ -106,7 +106,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input type="text" class="w100pc cotact_form" id="subject" name="subject"  placeholder="件名" required value="">
+              <input type="text" class="w100pc cotact_form" id="subject" name="subject"  placeholder="件名" required [(ngModel)]="model.subject">
             </li>
           </ul>
         </li>
@@ -119,7 +119,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <textarea class="w100pc" id="comment" name="comment" placeholder="お問い合わせ内容（1000文字まで）をお書きください" required rows="3"></textarea>
+              <textarea class="w100pc" id="comment" name="comment" placeholder="お問い合わせ内容（1000文字まで）をお書きください" required rows="3" [(ngModel)]="model.comment"></textarea>
             </li>
           </ul>
         </li>
