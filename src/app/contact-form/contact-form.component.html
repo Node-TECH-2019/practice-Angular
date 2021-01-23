@@ -92,7 +92,7 @@
             <li>
             <span class="error"></span>
               <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="3"  multiple>
-                <option value="営業代行">営業代行</option>
+                <option *ngFor="let contact_form of contact_forms" [value]="contact_form">営業代行</option>
                 <option value="ホームページ制作">ホームページ制作</option>
                 <option value="オーダースーツ制作">オーダースーツ制作</option>
                 <option value="Youtube動画制作">Youtube動画制作</option>
