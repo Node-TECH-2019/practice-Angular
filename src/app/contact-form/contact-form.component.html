@@ -15,7 +15,9 @@
               </label>
             </li>
             <li>
-            <span class="error"></span>
+              <div *ngIf="name.errors && (name.dirty || name.touched)">
+                <span class="error" [hidden]="!name.errors.required">正しく入力してください。</span>
+              </div>
               <input class="w100pc cotact_form" id="companyname" type="text" name="companyname" placeholder="会社名／団体名" [(ngModel)]="model.companyname">
             </li>
           </ul>
@@ -81,7 +83,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input type="tel" class="w100pc cotact_form" id="tel" name="tel" [(ngModel)]="model.tel" placeholder="お電話番号（半角英数字でご入力ください）">
+              <input type="tel" class="w100pc cotact_form" id="tel" name="tel" placeholder="お電話番号（半角英数字でご入力ください）" [(ngModel)]="model.tel">
             </li>
           </ul>
         </li>
