@@ -1,1 +1,37 @@
-<p>employee-detail3 works!</p>
+<h2>社員詳細</h2>
+<form class="container" [formGroup]="employeeForm" novalidate>
+  <div class="form-group">
+    <div class="full-width">
+      <label>会社名／団体名</label>
+      <input placeholder="会社名／団体名" type="text" name="companyname" formControlName="companyname">
+    </div>
+    <div class="full-width">
+      <label>お名前</label>
+      <input placeholder="お名前" type="text" name="your_name" formControlName="your_name">
+    </div>
+    <div class="full-width">
+      <label>ふりがな</label>
+      <input placeholder="ふりがな" type="text" name="furigana" formControlName="furigana">
+    </div>
+    <div class="full-width">
+      <label>Email アドレス</label>
+      <input placeholder="Email アドレス" type="text" name="email" formControlName="email">
+    </div>
+    <div class="full-width">
+      <label>Email アドレス（確認）</label>
+      <input placeholder="Email アドレス（確認）" type="text" name="email_check" formControlName="email_check">
+    </div>
+    <div class="full-width">
+      <label>お問い合わせの種類（※複数選択可）</label>
+      <select name="" id=""></select>
+    </div>
+    <div class="full-width">
+      <label>件名</label>
+      <input placeholder="件名" type="text" name="subject" formControlName="subject">
+    </div>
+    <div class="full-width">
+      <label>電話番号</label>
+      <input placeholder="電話番号" type="text" name="tel" formControlName="tel">
+    </div>
+  </div>
+</form>
