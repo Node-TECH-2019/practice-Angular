@@ -1,1 +1,7 @@
-<p>employee-detail2 works!</p>
+<h2>社員詳細</h2>
+<form [formGroup]="employeeForm" novalidate>
+  <div>
+    <label>名前</label>
+    <input placeholder="名前" type="text" name="name" formControlName="name"></input>
+  </div>
+</form>
