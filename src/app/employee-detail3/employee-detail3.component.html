@@ -22,16 +22,27 @@
       <input placeholder="Email アドレス（確認）" type="text" name="email_check" formControlName="email_check">
     </div>
     <div class="full-width">
+      <label>電話番号</label>
+      <input placeholder="電話番号" type="text" name="tel" formControlName="tel">
+    </div>
+    <div class="full-width">
       <label>お問い合わせの種類（※複数選択可）</label>
-      <select name="" id=""></select>
+      <select id="contact_type" formControlName="contact_type">
+        <option *ngFor="let contact_type of contact_types" [value]="contact_type">
+          {{ contact_type }}
+        </option>
+      </select>
     </div>
     <div class="full-width">
       <label>件名</label>
       <input placeholder="件名" type="text" name="subject" formControlName="subject">
     </div>
     <div class="full-width">
-      <label>電話番号</label>
-      <input placeholder="電話番号" type="text" name="tel" formControlName="tel">
+      <label>お問い合わせ内容</label>
+      <textarea name="comment" placeholder="お問い合わせ内容（1000文字まで）をお書きください" required rows="3" formControlName="comment"></textarea>
     </div>
   </div>
 </form>
+
+<p>Form value: {{ employeeForm.value | json }}</p>
+<p>Form status: {{ employeeForm.status | json }}</p>
