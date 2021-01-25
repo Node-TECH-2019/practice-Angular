@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, ɵɵNgOnChangesFeature} from '@angular/core';
-import { EmployeeModel, contact-types } from './employee-list.service';
+import { EmployeeModel, contact_types } from './employee-list.service';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeModel, contact-types } from './employee.model';
+import { EmployeeModel, contact_types } from './employee.model';
 
 
 
@@ -12,7 +12,7 @@ import { EmployeeModel, contact-types } from './employee.model';
 export class EmployeeDetail5Component {
   @Input() employee: EmployeeModel;
   employeeForm: FormGroup;
-  contact-types = contact-types;
+  contact_types = contact_types;
 
   constructor(public fb: FormBuilder, public employeeListService: EmployeeListService) {
     this.createForm();
@@ -23,7 +23,7 @@ export class EmployeeDetail5Component {
        id: '',
        name: ['', Validators.required],
        phone: ['', Validators.required],
-       department: [this.contact-types[0], Validators.required],
+       department: [this.contact_types[0], Validators.required],
        email: ''
      });
 
