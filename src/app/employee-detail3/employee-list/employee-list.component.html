@@ -1,1 +1,28 @@
-<p>employee-list works!</p>
+<h2>社員詳細</h2>
+<form class="container" [formGroup]="employeeForm" novalidate>
+  <div class="form-group">
+    <div class="full-width">
+      <label>名前</label>
+      <input placeholder="名前" type="text" name="name" formControlName="name">
+    </div>
+    <div class="full-width">
+      <label>電話番号</label>
+      <input placeholder="電話番号" type="text" name="phone" formControlNane="phone">
+    </div>
+    <div class="full-width">
+      <label>部署</label>
+      <select id="department" formControlName="department">
+        <option *ngfor="let department of departments" [value]="department">
+          {{ department}}</option>
+      </select>
+    </div>
+    <div class="full-width">
+      <label> メールアドレス</label>
+      <input placeholder=" メールアドレス" type="text" name="email"
+              formcont rolName="email">
+    </div>
+  </div>
+</form>
+
+<p>Form value: {{ employeeForm.value | json }}</p>
+<p>Form status: {{ employeeForm.status | json }}</p>
