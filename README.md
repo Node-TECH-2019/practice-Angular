@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## 命名規則
+
+スネークケースで変数名は記述する。
+変数名は英単語で記述をする。
+
+## コメントアウトについて
+新たに機能を追加する場合にはクラス名の上にどのようなソースコードであるかを確認する、
