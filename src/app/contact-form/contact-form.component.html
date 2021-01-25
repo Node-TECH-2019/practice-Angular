@@ -1,7 +1,6 @@
 <!-- contact -->
 <section id="contact">
   <h2 class="head-border txtC pl30 pr30">Contact</h2>
-  {{ model | json}}
   <div>
     {{ model | json}}
   </div>
@@ -16,7 +15,7 @@
               </label>
             </li>
             <li>
-                <span class="error"></span>
+            <span class="error"></span>
               <input class="w100pc cotact_form" id="companyname" type="text" name="companyname" placeholder="会社名／団体名" [(ngModel)]="model.companyname">
             </li>
           </ul>
@@ -82,7 +81,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <input type="tel" class="w100pc cotact_form" id="tel" name="tel" placeholder="お電話番号（半角英数字でご入力ください）" [(ngModel)]="model.tel">
+              <input type="tel" class="w100pc cotact_form" id="tel" name="tel" [(ngModel)]="model.tel" placeholder="お電話番号（半角英数字でご入力ください）">
             </li>
           </ul>
         </li>
@@ -95,7 +94,7 @@
             </li>
             <li>
             <span class="error"></span>
-              <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="3" [(ngModel)]="model.contact_type">
+              <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="s3" [(ngModel)]="model.contact_type">
                 <option *ngFor="let contact_type of contact_types" [value]="contact_type">{{contact_type}}</option>
               </select>
             </li>
