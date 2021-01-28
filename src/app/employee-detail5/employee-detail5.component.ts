@@ -1,7 +1,7 @@
-import { Component, Input, Output, EventEmitter, ɵɵNgOnChangesFeature} from '@angular/core';
-import { EmployeeModel, contact_types } from './employee-list.service';
+import { EmployeeListService } from './employee-list.service';
+import { Forms, contact_types } from '../forms.model';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeModel, contact_types } from './employee.model';
+import { Component, Input, Output, EventEmitter, ɵɵNgOnChangesFeature} from '@angular/core';
 
 
 
@@ -10,7 +10,7 @@ import { EmployeeModel, contact_types } from './employee.model';
   templateUrl: './employee-detail5.component.html',
 })
 export class EmployeeDetail5Component {
-  @Input() employee: EmployeeModel;
+  @Input() employee: Forms;
   employeeForm: FormGroup;
   contact_types = contact_types;
 
