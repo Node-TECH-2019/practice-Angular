@@ -16,7 +16,7 @@ export class EmployeeDetail2Component implements OnInit {
 
    CreateForm(){
      this.employeeForm = this.fb.group({
-       name: ['',Validators.required],
+       your_name: ['',Validators.required],
      })
    }
 
