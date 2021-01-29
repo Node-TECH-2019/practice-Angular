@@ -20,12 +20,17 @@ export class EmployeeDetail5Component {
 
    createForm() {
      this.employeeForm = this.fb.group({
-       id: '',
-       name: ['', Validators.required],
-       phone: ['', Validators.required],
-       department: [this.contact_types[0], Validators.required],
-       email: ''
+       your_name: '',
+       furigana: ['', Validators.required],
+       email: ['', Validators.required],
+       email_check: ['', Validators.required],
+       contact_type: [this.contact_types[0], Validators.required],
+       subject: '',
+       comment: '',
+       companyname: '',
+       tel: ''
      });
+   }
 
      ngOnChanges(){
        this.employeeForm.reset(
