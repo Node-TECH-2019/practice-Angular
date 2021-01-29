@@ -19,11 +19,15 @@ export class EmployeeDetail4Component implements OnInit {
 
   createForm(){
     this.employeeForm = this.fb.group({
-      id: '',
-      name: ['', Validators.required ],
-      phone: ['', Validators.required ],
+      companyname: '',
+      your_name: ['', Validators.required ],
+      furigana: ['', Validators.required ],
+      email: ['', Validators.required ],
+      email_check: ['', Validators.required ],
       contact_types: [this.contact_types[0], Validators.required ],
-      email: ''
+      subject: ['', Validators.required ],
+      comment: ['', Validators.required ],
+      tel: ''
     });
   }
   ngOnChanges() {

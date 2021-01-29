@@ -20,15 +20,15 @@ export class EmployeeDetail5Component {
 
    createForm() {
      this.employeeForm = this.fb.group({
-       your_name: '',
-       furigana: ['', Validators.required],
-       email: ['', Validators.required],
-       email_check: ['', Validators.required],
-       contact_type: [this.contact_types[0], Validators.required],
-       subject: '',
-       comment: '',
-       companyname: '',
-       tel: ''
+        companyname: '',
+        your_name: ['', Validators.required ],
+        furigana: ['', Validators.required ],
+        email: ['', Validators.required ],
+        email_check: ['', Validators.required ],
+        contact_types: [this.contact_types[0], Validators.required ],
+        subject: ['', Validators.required ],
+        comment: ['', Validators.required ],
+        tel: ''
      });
    }
 

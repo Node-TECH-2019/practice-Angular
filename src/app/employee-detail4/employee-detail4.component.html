@@ -2,23 +2,43 @@
 <form class="container" [formGroup] ="employeeForm" novalidate (submit)="save($event)">
   <div class="form-group">
     <div class="full-width">
+      <label>会社名</label>
+      <input placeholder="名前" type="text" name="companyname" formControlName= "companyname">
+    </div>
+    <div class="full-width">
       <label>名前</label>
-      <input placeholder="名前" type="text" name="name" formControlName= "name">
+      <input placeholder="名前" type="text" name="your_name" formControlName= "your_name">
+    </div>
+    <div class="full-width">
+      <label>名前</label>
+      <input placeholder="名前" type="text" name="furigana" formControlName= "furigana">
+    </div>
+    <div class="full-width">
+      <label>メールアドレス</label>
+      <input placeholder="メールアドレス" type="text" name="email" formControlName="email">
+    </div>
+    <div class="full-width">
+      <label>メールアドレス（確認）</label>
+      <input placeholder="メールアドレス" type="text" name="email_check" formControlName="email_check">
     </div>
     <div class="full-width">
       <label>電話番号</label>
-      <input placeholder="電話番号" type="text" name="phone" formControlName= "phone">
+      <input placeholder="電話番号" type="text" name="tel" formControlName= "tel">
     </div>
     <div class="full-width">
-      <label>部署</label>
-      <select id="department" formControlName="department">
+      <label>contact_type</label>
+      <select id="contact_type" formControlName="contact_type">
         <option *ngFor="let contact_type of contact_types" [value]= "contact_type">
         {{contact_type}}</option>
       </select>
     </div>
     <div class="full-width">
-      <label>メールアドレス</label>
-      <input placeholder="メールアドレス" type="text" name="email" formControlName="email">
+      <label>件名</label>
+      <input placeholder="件名" type="text" name="subject" formControlName= "subject">
+    </div>
+    <div class="full-width">
+      <label>comment</label>
+      <input placeholder="件名" type="text" name="comment" formControlName= "comment">
     </div>
     <button mdButton type="submit">保存</button>
   </div>
