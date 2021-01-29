@@ -42,7 +42,6 @@ export class EmployeeDetail5Component {
        event.preventDefault();
        this.employeeListService.updateEmployee(this.employeeForm.value);
      }
-   }
 
   ngOnInit(): void {
   }
