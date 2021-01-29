@@ -3,17 +3,18 @@
   <div class="form-group">
     <div class="full-width">
       <label>名前</label>
-      <input placeholder="名前" type="text" name="name" formControlName="name">
+      <input placeholder="名前" type="text" name="your_name" formControlName="your_name">
     </div>
     <div class="full-width">
       <label>電話番号</label>
-      <input placeholder="電話番号" type="text" name="phone" formControlNane="phone">
+      <input placeholder="電話番号" type="text" name="tel" formControlNane="tel">
     </div>
     <div class="full-width">
-      <label>部署</label>
-      <select id="department" formControlName="department">
-        <option *ngfor="let department of departments" [value]="department">
-          {{ department}}</option>
+      <label>お問い合わせの種類（※複数選択可）</label>
+      <select id="contact_type" formControlName="contact_type">
+        <option *ngFor="let contact_type of contact_types" [value]="contact_type">
+          {{ contact_type }}
+        </option>
       </select>
     </div>
     <div class="full-width">
