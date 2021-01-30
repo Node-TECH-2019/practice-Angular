@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid {
+  border: solid 2px #ff0000;
+}
+
 #result_box {
 	margin: 0 auto;
 	text-align: center;
