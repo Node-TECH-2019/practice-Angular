@@ -1,4 +1,21 @@
-<h2>社員詳細</h2>
+<h3 *ngFor="isLoading"><i>Loading...</i></h3>
+<h3 *ngFor="!isLoading">社員を選んで下さい</h3>
+
+<nav>
+  <button (click)="getEmployees()">再読込</button>
+  <dl>
+    <li *ngFor="let employee of employees | async" (click)="select(employee)">
+      {{ employee.name }}</li>
+  </dl>
+
+  <div *ngIf="selectedEmployee">
+    <hr>
+    <h2>社員商才</h2>
+    <h3>編集：{{selectedEmployee.name}}</h3>
+    <employee-detail-5 [employee]="selectedEmployee"></employee-detail-5>
+  </div>
+</nav>
+<!-- <h2>社員詳細</h2>
 <form class="container" [formGroup]="employeeForm" novalidate>
   <div class="form-group">
     <div class="full-width">
@@ -26,4 +43,4 @@
 </form>
 
 <p>Form value: {{ employeeForm.value | json }}</p>
-<p>Form status: {{ employeeForm.status | json }}</p>
+<p>Form status: {{ employeeForm.status | json }}</p> -->

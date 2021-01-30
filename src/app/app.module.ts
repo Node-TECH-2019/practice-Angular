@@ -12,7 +12,7 @@ import { EmployeeDetail2Component } from './employee-detail2/employee-detail2.co
 import { EmployeeDetail3Component } from './employee-detail3/employee-detail3.component';
 import { EmployeeDetail4Component } from './employee-detail4/employee-detail4.component';
 import { EmployeeDetail5Component } from './employee-detail5/employee-detail5.component';
-import { EmployeeListComponent } from './employee-detail2/employee-list/employee-list.component';
+import { EmployeeListComponent } from './employee-detail3/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-import { EmployeeListService } from './employee-list.service';
+import { EmployeeListService } from '../employee-list.service';
 import { Forms, contact_types } from '../forms.model';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, Input, Output, EventEmitter, ɵɵNgOnChangesFeature} from '@angular/core';
