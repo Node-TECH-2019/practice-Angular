@@ -1,6 +1,5 @@
-input.ng-invalid,
-textarea.ng-invalid,
-select.ng-invalid {
+input.ng-invalid.dirty,
+textarea.ng-invalid.dirty,
+select.ng-invalid.dirty {
   border: solid 2px #ff0000;
 }
-

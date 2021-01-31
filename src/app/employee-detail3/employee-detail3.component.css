@@ -1,5 +1,145 @@
-input.ng-invalid,
-textarea.ng-invalid,
-select.ng-invalid {
+@charset "utf-8";
+
+input.ng-invalid.dirty,
+textarea.ng-invalid.dirty,
+select.ng-invalid.dirty {
   border: solid 2px #ff0000;
+}
+
+#result_box {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#result_box > p > a {
+	color: #286BC1;
+}
+
+.cotact_form {
+  height: 30px;
+}
+
+textarea {
+	resize: none;
+	height: 200px;
+}
+
+.needtag {
+	display: inline-block;
+  vertical-align: middle;
+}
+
+.btn_box_inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	width: 85px;
+	padding: 2px 10px;
+}
+
+@media screen and (min-width: 769px){
+
+  .cotact_form {
+    margin-bottom: 20px;
+  }
+
+  #contact {
+    padding-top: 130px;
+    margin-bottom: 130px;
+  }
+
+  #contact_form {
+    width: 40%;
+  }
+
+  .cotact_form {
+    margin-bottom: 20px;
+  }
+
+  .contact_list {
+    font-size: 20px;
+  }
+
+  .needtag {
+    padding: 2px 0 0;
+  }
+
+  #contact_form select {
+    height: 90px;
+  }
+
+  .btn_box {
+    width: 280px;
+    margin: 35px auto 0;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+
+  .cotact_form {
+    margin-bottom: 10px;
+  }
+
+  #contact {
+    padding-top: 130px;
+    margin-bottom: 45px;
+  }
+
+  #contact_form {
+    width: 60%;
+  }
+
+  .cotact_form {
+    margin-bottom: 10px;
+  }
+
+  .needtag {
+    padding: 2px 0 0;
+  }
+
+  #contact_form select {
+    height: 90px;
+  }
+
+  .btn_box {
+    width: 280px;
+    margin: 35px auto 0;
+  }
+}
+
+
+@media screen and (max-width: 480px){
+
+  #contact {
+    padding-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  #contact_form {
+    width: 80%;
+  }
+
+  .contact_list {
+    margin-top: 5px;
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  #contact_form select {
+    height: 30px;
+  }
+
+  .btn_box {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .btn_box_inner li input {
+    font-size: 9px;
+  }
 }
