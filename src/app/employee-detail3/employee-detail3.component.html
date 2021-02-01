@@ -25,8 +25,15 @@
               </label>
             </li>
             <li>
-            <span class="error"></span>
-              <input class="w100pc cotact_form" id="your_name" type="text" name="your_name" placeholder="氏名" formControlName="your_name">
+            <span class="error" [hidden]="!(name.errors?.required && name.dirty)">氏名は漢字もしくはカナ入力で50文字で入力してください。</span>
+              <input class="w100pc cotact_form"
+              id="your_name" type="text" name="your_name" placeholder="氏名" formControlName="your_name"　
+              #inputSubnetMaskInfo="ngModel"
+              required
+              minlength="{{minNetworkAddressLength}}"
+              maxlength="{{maxNetworkAddressLength}}"
+              pattern="{{networkAddressPattern}}"
+              (keyup)="onKeyUp('inputSubnetMaskInfo', inputSubnetMaskInfo.errors)">
             </li>
           </ul>
         </li>
@@ -91,8 +98,8 @@
             </li>
             <li>
             <span class="error"></span>
-              <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="s3" formControlName="contact_type">
-                <option *ngFor="let contact_type of contact_types" [value]="contact_type">{{contact_type}}</option>
+              <select class="w100pc cotact_form " id="contact_type" name="contact_type" size="s3" multiple formControlName="contact_type">
+                <option *ngFor="let contact_type of contact_types" [value]="contact_type" >{{contact_type}}</option>
               </select>
             </li>
           </ul>
