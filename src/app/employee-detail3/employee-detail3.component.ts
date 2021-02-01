@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { contact_types } from '../forms.model';
-import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 @Component({
   selector: 'app-employee-detail3',
   templateUrl: './employee-detail3.component.html',
@@ -11,8 +11,8 @@ export class EmployeeDetail3Component implements OnInit {
   employeeForm: FormGroup;
   contact_types = contact_types;
 
-  public readonly minYourNameLength: number = 1;
-  public readonly maxYourNameLength: number = 50;
+  // public readonly minYourNameLength: number = 1;
+  // public readonly maxYourNameLength: number = 50;
 
 
 
