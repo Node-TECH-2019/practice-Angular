@@ -25,15 +25,8 @@
               </label>
             </li>
             <li>
-            <span class="error" [hidden]="!(name.errors?.required && name.dirty)">氏名は漢字もしくはカナ入力で50文字で入力してください。</span>
-              <input class="w100pc cotact_form"
-              id="your_name" type="text" name="your_name" placeholder="氏名" formControlName="your_name"　
-              #inputSubnetMaskInfo="ngModel"
-              required
-              minlength="{{minNetworkAddressLength}}"
-              maxlength="{{maxNetworkAddressLength}}"
-              pattern="{{networkAddressPattern}}"
-              (keyup)="onKeyUp('inputSubnetMaskInfo', inputSubnetMaskInfo.errors)">
+            <span class="error" [hidden]="!(your_name.errors?.required && your_name.dirty)">氏名は漢字もしくはカナ入力で50文字で入力してください。</span>
+              <input class="w100pc cotact_form" id="your_name" type="text" name="your_name" placeholder="氏名" formControlName="your_name" required >
             </li>
           </ul>
         </li>
