@@ -132,10 +132,10 @@
               </label>
             </li>
             <li>
-              <ng-container *ngIf="tel.invalid && (tel.touched || tel.dirty)">
-                <p *ngIf="tel.hasError('required')">必須項目です</p>
+              <ng-container *ngIf="subject.invalid && (subject.touched || subject.dirty)">
+                <p *ngIf="subject.hasError('required')">必須項目です</p>
                 <!--ここから-->
-                <p *ngIf="tel.hasError('pattern')">入力パターンが間違ってます</p>
+                <p *ngIf="subject.hasError('pattern')">入力パターンが間違ってます</p>
                 <!--ここまで-->
               </ng-container>
             <span class="error"></span>
@@ -151,6 +151,12 @@
               </label>
             </li>
             <li>
+              <ng-container *ngIf="comment.invalid && (comment.touched || comment.dirty)">
+                <p *ngIf="comment.hasError('required')">必須項目です</p>
+                <!--ここから-->
+                <p *ngIf="comment.hasError('pattern')">入力パターンが間違ってます</p>
+                <!--ここまで-->
+              </ng-container>
             <span class="error"></span>
               <textarea class="w100pc" id="comment" name="comment" placeholder="お問い合わせ内容（1000文字まで）をお書きください" formControlName="comment"></textarea>
             </li>

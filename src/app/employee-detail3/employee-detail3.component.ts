@@ -72,10 +72,10 @@ export class EmployeeDetail3Component implements OnInit {
       //match emailの記述が発見できませんでした。のちの人にお願いいたします。
       email_check: ['', [Validators.required , Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
       contact_type: [this.contact_types[1], Validators.required ],
-      subject: ['', Validators.required , Validators.pattern('/^[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]+$/u') ],
-      comment: ['', Validators.required , Validators.pattern('/^[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]+$/u')],
-      companyname: ['', Validators.pattern('/^[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]+$/u')],
-      tel: ['', Validators.pattern("[A-Z0-9]*")]
+      subject: ['', [Validators.required , Validators.pattern('[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]*')]],
+      comment: ['', [Validators.required , Validators.pattern('[ぁ-んァ-ヶ一-龥々０-９a-zA-Zａ-ｚＡ-Ｚー・’＠]*')]],
+      companyname: ['', Validators.pattern('[ぁ-んァ-ヶ一-龥々０-９a-zA-Zａ-ｚＡ-Ｚー・’＠]+$/u')],
+      tel: ['', [Validators.pattern("[A-Z0-9]*")]]
     })
   }
 
