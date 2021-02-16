@@ -66,8 +66,8 @@ export class EmployeeDetail3Component implements OnInit {
   private _buildForm(): FormGroup {
     return this._fb.group({
       your_name: ['', [Validators.required, Validators.pattern('[a-zA-Zぁ-んァ-ン一-龥]*')]],
-      furigana: ['', Validators.required , Validators.pattern('/^[ぁ-ん]+$/') ],// your_nameがa-zA-Zなら、notrequiredに
-      email: ['', Validators.required, Validators.pattern('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/') ],
+      furigana: ['', [Validators.required , Validators.pattern('[ぁ-ん]*')]],// your_nameがa-zA-Zなら、notrequiredに
+      email: ['', [Validators.required, Validators.pattern('([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)')] ],
       email_check: ['', Validators.required , Validators.pattern('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/'), matchEmail],
       contact_type: [this.contact_types[1], Validators.required ],
       subject: ['', Validators.required , Validators.pattern('/^[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]+$/u') ],
