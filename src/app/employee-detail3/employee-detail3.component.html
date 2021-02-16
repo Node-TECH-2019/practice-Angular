@@ -61,7 +61,12 @@
               </label>
             </li>
             <li>
-            <span class="error"></span>
+              <ng-container *ngIf="email.invalid && (email.touched || email.dirty)">
+                <p *ngIf="email.hasError('required')">必須項目です</p>
+                <!--ここから-->
+                <p *ngIf="email.hasError('pattern')">入力パターンが間違ってます</p>
+                <!--ここまで-->
+              </ng-container>
               <input type="email" class="w100pc cotact_form" id="email" name="email" placeholder="Email アドレス" formControlName="email">
             </li>
           </ul>
@@ -74,6 +79,12 @@
               </label>
             </li>
             <li>
+              <ng-container *ngIf="email_check.invalid && (email_check.touched || email_check.dirty)">
+                <p *ngIf="email_check.hasError('required')">必須項目です</p>
+                <!--ここから-->
+                <p *ngIf="email_check.hasError('pattern')">入力パターンが間違ってます</p>
+                <!--ここまで-->
+              </ng-container>
             <span class="error"></span>
               <input type="email" class="w100pc cotact_form" id="email_check" name="email_check" placeholder="Email アドレス（確認）" formControlName="email_check">
             </li>
@@ -87,6 +98,12 @@
               </label>
             </li>
             <li>
+              <ng-container *ngIf="tel.invalid && (tel.touched || tel.dirty)">
+                <p *ngIf="tel.hasError('required')">必須項目です</p>
+                <!--ここから-->
+                <p *ngIf="tel.hasError('pattern')">入力パターンが間違ってます</p>
+                <!--ここまで-->
+              </ng-container>
             <span class="error"></span>
               <input type="tel" class="w100pc cotact_form" id="tel" name="tel" placeholder="お電話番号（半角英数字でご入力ください）" formControlName="tel">
             </li>
@@ -115,6 +132,12 @@
               </label>
             </li>
             <li>
+              <ng-container *ngIf="tel.invalid && (tel.touched || tel.dirty)">
+                <p *ngIf="tel.hasError('required')">必須項目です</p>
+                <!--ここから-->
+                <p *ngIf="tel.hasError('pattern')">入力パターンが間違ってます</p>
+                <!--ここまで-->
+              </ng-container>
             <span class="error"></span>
               <input type="text" class="w100pc cotact_form" id="subject" name="subject"  placeholder="件名" formControlName="subject">
             </li>

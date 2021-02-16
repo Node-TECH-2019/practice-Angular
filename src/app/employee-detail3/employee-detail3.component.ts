@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { contact_types } from '../forms.model';
-import { FormControl, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators, AbstractControl, EmailValidator } from '@angular/forms';
 @Component({
   selector: 'app-employee-detail3',
   templateUrl: './employee-detail3.component.html',
@@ -67,8 +67,10 @@ export class EmployeeDetail3Component implements OnInit {
     return this._fb.group({
       your_name: ['', [Validators.required, Validators.pattern('[a-zA-Zぁ-んァ-ン一-龥]*')]],
       furigana: ['', [Validators.required , Validators.pattern('[ぁ-ん]*')]],// your_nameがa-zA-Zなら、notrequiredに
-      email: ['', [Validators.required, Validators.pattern('([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)')] ],
-      email_check: ['', Validators.required , Validators.pattern('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/'), matchEmail],
+      //誰も回答を見つけることができなかったものです。この難題にあなたは解けることができる
+      email: ['', [Validators.required,Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]] ,
+      //match emailの記述が発見できませんでした。のちの人にお願いいたします。
+      email_check: ['', [Validators.required , Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
       contact_type: [this.contact_types[1], Validators.required ],
       subject: ['', Validators.required , Validators.pattern('/^[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]+$/u') ],
       comment: ['', Validators.required , Validators.pattern('/^[ぁ-んァ-ヶ一-龥々０-９ａ-ｚＡ-Ｚー・’＠]+$/u')],
